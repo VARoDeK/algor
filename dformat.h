@@ -1,7 +1,7 @@
 /* ========================= DISPLAY FORMAT =============================== */
 
-#ifndef __PFORMAT_H__
-#define __PFORMAT_H__ /* pformat_h */
+#ifndef __DFORMAT_H__
+#define __DFORMAT_H__ /* dformat_h */
 
 /* ====================== All Declarations Below This ====================== */
 
@@ -28,9 +28,6 @@
 /* ---- Print With Newline at End ------------------------------------------ */
 #define print(x, ...) fprintf(stdout, x "\n", __VA_ARGS__)
 
-/* ---- Print String With Newline at End ----------------------------------- */
-#define prints(x) fprintf(stdout, x "\n")
-
 /* ---- Input Bold --------------------------------------------------------- */
 #define fgetsB(...) {\
                        printf(BOLD_FORMAT);\
@@ -56,15 +53,18 @@
 "----------------------------")
 
 #define print_error(x, ...) {\
-                              line();\
-                              fprintf(stderr,"ERROR: " x "\n", __VA_ARGS__);\
-                              line();\
+                               line();\
+                               fprintf(stderr, "ERROR: " x "\n", __VA_ARGS__);\
+                               fprintf(stderr, "Line: %d\n", __LINE__);\
+                               fprintf(stderr, "Function: %s\n", __func__);\
+                               fprintf(stderr, "File: %s\n", __FILE__);\
+                               line();\
                             }
 
 
 
 /* ====================== No Declarations Beyond This ======================= */
 
-#endif /* pformat_h */
+#endif /* dformat_h */
 
 /* ========================================================================= */

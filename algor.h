@@ -13,14 +13,14 @@
  * or until newline character is found.
  */
 struct {
-  char cwd[PATH_MAX];     /* Current Working Directory */
-  char questwd[PATH_MAX]; /* Question Working Directory */
-  char testwd[PATHMAX];   /* Test Working Directory */
-  char compwd[PATH_MAX];  /* Compiled Working Directory */
-} algor_config;
+    char cwd[PATH_MAX];     /* Current Working Directory */
+    char questwd[PATH_MAX]; /* Question Working Directory */
+    char testwd[PATH_MAX];   /* Test Working Directory */
+    char compwd[PATH_MAX];  /* Compiled Working Directory */
+} extern algor_config;
 
 
-/* ====================== No Declarations Beyond This ======================= */
+/* ===================== No Declarations Beyond This ======================= */
 
 #endif /* algor_h */
 

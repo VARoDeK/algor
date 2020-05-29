@@ -1,0 +1,27 @@
+================================================================================
+                             DEVELOPERS GUIDE
+================================================================================
+==============
+ Coding Style
+==============
+
+1) - Use Space instead of tabs.
+2) - 4 Spaces for hanging identation.
+3) - Do no make use of "goto".
+4) - Max 80 characters per line.
+5) - Inclusion of headerfiles should be in lexicographical order.
+6) - Don't make use of "int", "float", etc.
+     Instead use: "int32_t", "uint32_t", etc. from "stdint.h" .
+
+================================================================================
+
+=======
+ Files
+=======
+
+1) - "algor.h" : Contains declarations used by all the files.
+2) - "dformat.h" : Contains every improved I/O related functions in from of
+                   macro. Use them instead of standard functions.
+3) - "functions.h" : Contains declarations of special functions.
+
+================================================================================
