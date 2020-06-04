@@ -11,7 +11,7 @@
 /* ---- fgets() improved. Check functions.h -------------------------------- */
 void fgets_imp(char *__restrict __s, int __n, FILE *__restrict __stream);
 
-/* ====================== No Declarations Beyond This ======================= */
+/* ===================== No Declarations Beyond This ======================= */
 
 #endif /* functions_h */
 

@@ -1,4 +1,4 @@
-/* ========================= DISPLAY FORMAT =============================== */
+/* ========================== DISPLAY FORMAT =============================== */
 
 #ifndef __DFORMAT_H__
 #define __DFORMAT_H__ /* dformat_h */
@@ -63,7 +63,7 @@
 
 
 
-/* ====================== No Declarations Beyond This ======================= */
+/* ===================== No Declarations Beyond This ======================= */
 
 #endif /* dformat_h */
 

@@ -5,13 +5,31 @@
  Coding Style
 ==============
 
-1) - Use Space instead of tabs.
-2) - 4 Spaces for hanging identation.
-3) - Do no make use of "goto".
-4) - Max 80 characters per line.
-5) - Inclusion of headerfiles should be in lexicographical order.
-6) - Don't make use of "int", "float", etc.
-     Instead use: "int32_t", "uint32_t", etc. from "stdint.h" .
+1)  - Use Space instead of tabs.
+2)  - 4 Spaces for hanging identation.
+3)  - Do no make use of "goto".
+4)  - Max 79 characters per line. May extend to 80, but only in case where it is
+     impossible to limit it in 79.
+
+5)  - Inclusion of headerfiles should be in lexicographical order.
+6)  - Don't make use of "int", "short", etc.
+     Instead use: "int32_t", "int8_t", etc. from "stdint.h" .
+
+7)  - Commits should be signed-off by the author. The sign-off email should be
+     same the mail with which PR/patch is sent. Failing any of the condition,
+     oull request(s) will not be entertained.
+
+8)  - If function declaration and definition exist in different file, then a
+     one should mention the file, where the function is defined, in a comment,
+     just above the declaration. For ex:
+
+         1|/* Defined in functions.c */
+         2|void fgets_imp(char *__restrict __s,
+         3|               int __n,
+         4|               FILE *__restrict __stream);
+
+9)  - All comments (single/multiple lines) should be written using "/*  */".
+10) - Functions should be atomic in nature.
 
 ================================================================================
 
