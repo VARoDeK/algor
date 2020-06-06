@@ -10,5 +10,16 @@
 #include "functions.h"
 
 int main (int argc, char *argv[]){
-  printBH("%s", "Hello");
+    char a[100];
+
+    printf("Enter a string: ");
+    getsB(a, 100);
+    printBH("%s",a);
+
+    printH("%s", "Hello");
+    printB("%s", "Hello");
+    printBH("%s", "Hello");
+    print_error("%s", "testing");
+
+    return 0;
 }

@@ -32,7 +32,6 @@
 10) - Functions should be atomic in nature.
 
 ================================================================================
-
 =======
  Files
 =======
@@ -41,5 +40,62 @@
 2) - "dformat.h" : Contains every improved I/O related functions in from of
                    macro. Use them instead of standard functions.
 3) - "functions.h" : Contains declarations of special functions.
+
+================================================================================
+=================
+ Print Functions
+=================
+
+A new range of print-to-terminal functions are provided in form of macros in
+"dformat.h".
+
+Then will work and accept arguments exactly like "printf()". The only change is
+in what user see on the terminal. THEY ALSO ADD A NEWLINE AFTER PRINTING.
+
+1) - "printB()" : Prints the content in bold format.
+2) - "printH()" : Prints the content in highlighted format.
+3) - "printBH()" : Prints the content in bold and highlighted format.
+
+A special macro function for printing error is also provided.
+"print_error()" : Works and accepts arguments exactly like "printf()". User is
+                  required to pass error message as an argument using functions
+                  provided by "error.h". Being a macro, it is able to print
+                  Line number and Function-name, where error has occured, and
+                  also prints File-name.
+
+================================================================================
+=================
+ Input Functions
+=================
+
+Consider the case:
+    1|scanf("%d", &a);
+    2|scanf("%s", b);
+    3|
+
+After executing line-1, the program jumps to line-3. This happens because scanf
+reads from input buffer and starts parsing the content into an integer for
+line-1. This happens until an non-integer is catched. Now, to input something
+user presses "Enter" key, which sends an additional new-line character into
+buffer. As soon as that new-line character is caught by "scanf()" for line-1, it
+leaves it in the buffer and declares its task as finished.
+
+At line-2, that new-line character is caught by "scanf()" and hence it's task is
+completed and it jumps to line-3.
+
+There are many ways to avoid it and make the program error free.
+Since "AlgoR" won't be using input functions much, we can opt for a bit costly
+but effective and roubust approach. Take all the input in form of string and
+convert them using "atoi", "atof", etc. wherever required.
+
+For this, "fgets_imp()" is provided. It stands for "fgets-improved". "Declared
+in "functions.h" and defined in "functions.c".
+"fgets_imp()" : Works and accepts arguments exctly like "fgets()". It will
+                remove garbage value in the input buffer, unnecessary new-line
+                character caught at the end, etc.
+
+Macro functions like "getsB()", "getsH()" and "getsBH()" are provided in
+"dformat.h" to take formatted input from terminal. Even they make use of
+"fgets_imp()" to read from stdin.
 
 ================================================================================

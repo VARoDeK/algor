@@ -2,17 +2,21 @@ CC = gcc
 CFLAGS = -Wall
 
 #Dependencies
-DEPS = algor.h dformat.h functions.h
+DEPS_0 = algor.h dformat.h functions.h
+DEPS_1 = dformat.h functions.h
+DEPS_2 = functions.h
 
 #Object Files
-OBJ_ALGOR = functions.o main.o
+OBJ_0 = main.o
+OBJ_1 = functions.o
 
 #Default goal
-algor: $(OBJ_ALGOR)
+algor: $(OBJ_1) $(OBJ_0)
 	$(CC) $(CFLAGS) -o $@ $^
 
 #Header dependencies
-$(OBJ_ALGOR): $(DEPS)
+$(OBJ_0): $(DEPS_0)
+$(OBJ_1): $(DEPS_2)
 
 .PHONY: clean
 clean:

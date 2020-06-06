@@ -4,15 +4,15 @@
 /* ========================================================================= */
 
 #ifndef __FUNCTIONS_H__
-#define __FUNCTIONS_H__ /* functions_h */
+#define __FUNCTIONS_H__ /* functions.h */
 
 /* ====================== All Declarations Below This ====================== */
 
-/* ---- fgets() improved. Check functions.h -------------------------------- */
-void fgets_imp(char *__restrict __s, int __n, FILE *__restrict __stream);
+    /* ---- fgets() improved. Check functions.h ---------------------------- */
+    void fgets_imp(char *__restrict __s, int __n, FILE *__restrict __stream);
 
 /* ===================== No Declarations Beyond This ======================= */
 
-#endif /* functions_h */
+#endif /* functions.h */
 
 /* ========================================================================= */
